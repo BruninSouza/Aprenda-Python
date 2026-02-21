@@ -1,11 +1,10 @@
 
-# Aprenda Python
+# 🔗 [Aprenda Python](https://bruninsouza.github.io/Aprenda-Python/intro.html)
 
 **Autor**: Bruno Souza da Costa 
 
 **Contatos**: <a href="mailto:brun.souz4@gmail.com" target="_blank"> E-mail </a> |
 [LinkedIn](http://www.linkedin.com/in/bruno-souza-a74396214)
-
 
 ## Sobre o projeto
 
@@ -26,10 +25,6 @@ O **Aprenda Python** é um projeto de ensino de Python desenvolvido como um site
 - **Acessibilidade**: O site tem link direto com o Google Colab. Isso permite que mesmo pessoas sem computadores consigam acessar o site e aprender a programar em Python.
 
 - **Navegação Clara**: O conteúdo é organizado em capítulos, facilitando o acompanhamento da jornada de aprendizado.
-
-## Como Visualizar
-
-É possível acessar o site através do [link](https://bruninsouza.github.io/Aprenda-Python/intro.html)
 
 ## Como Contribuir
 
