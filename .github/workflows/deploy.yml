@@ -12,10 +12,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          cache: 'pipenv'
+
+      - name: Install Pipenv
+        run: pip install pipenv
+
       - name: Install dependencies
         run: |
-          pip install jupyter-book
-          pip install -r requirements.txt # se você tiver um arquivo requirements.txt
+          pipenv install --system --deploy
 
       - name: Build the book
         run: jupyter-book build .
