@@ -434,7 +434,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sintax-basica"><strong>Sintax Básica</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sintaxe-basica"><strong>Sintaxe Básica</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-e-argumentos"><strong>Parâmetros e Argumentos</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-padrao-default"><strong>Parâmetros Padrão (Default)</strong></a></li>
 </ul>
@@ -442,7 +442,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retorno"><strong>Retorno</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escolpo-global-e-escolpo-local"><strong>Escolpo Global e Escolpo Local</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escopo-global-e-escopo-local"><strong>Escopo Global e Escopo Local</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empacotamento-de-argumentos-args-e-kwargs"><strong>Empacotamento de Argumentos (<code class="docutils literal notranslate"><span class="pre">*args</span></code> e <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>)</strong></a></li>
 </ul>
             </nav>
@@ -460,8 +460,8 @@ document.write(`
 <p>Uma função é um bloco de código independente que pode ser executado várias vezes em um programa. Ela pode receber entradas (parâmetros), processar dados e retornar uma saída.</p>
 <p>A principal característica de uma função é encapsular um conjunto de instruções, facilitando a reutilização e a manutenção do código.</p>
 <p>Ao usar funções, o código se torna mais simples e fácil de entender, pois cada função tem um objetivo específico.</p>
-<section id="sintax-basica">
-<h2><strong>Sintax Básica</strong><a class="headerlink" href="#sintax-basica" title="Link to this heading">#</a></h2>
+<section id="sintaxe-basica">
+<h2><strong>Sintaxe Básica</strong><a class="headerlink" href="#sintaxe-basica" title="Link to this heading">#</a></h2>
 <p>Para criar uma função, usamos a palavra-chave <code class="docutils literal notranslate"><span class="pre">def</span></code>, seguida pelo nome da função e, opcionalmente, pelos parâmetros.</p>
 <p>A estrutura básica de uma função é a seguinte:</p>
 <ul class="simple">
@@ -517,7 +517,7 @@ document.write(`
 <h4><strong>Parâmetros Padrão (Default)</strong><a class="headerlink" href="#parametros-padrao-default" title="Link to this heading">#</a></h4>
 <p>Às vezes, queremos que uma função tenha uma opção padrão, para que o usuário não precise preencher tudo todas as vezes. São valores atribuídos aos parâmetros no momento em que a função é definida. Para fazer isso, nós usamos o que chamamos <strong>parâmetros padrão</strong>.</p>
 <p>Eles servem como um valor de reserva, se você chamar a função sem passar esse dado, o sistema utiliza o valor padrão automaticamente, permitindo que a <strong>função</strong> seja flexível.</p>
-<p>Para utilizar criar um <strong>parâmetro padrão</strong> é bem simples, basta usar um operador de atribuição (<code class="docutils literal notranslate"><span class="pre">=</span></code>) após o nome do parâmetro e em seguida informar o valor padrão que ele terá.</p>
+<p>Para criar um parâmetro padrão é bem simples, basta usar um operador de atribuição (<code class="docutils literal notranslate"><span class="pre">=</span></code>) após o nome do parâmetro e em seguida informar o valor padrão que ele terá.</p>
 <p>Exemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -557,9 +557,10 @@ beatriz@outlook.com
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span class="c1"># JEITO Certo: Use None como valor padrão padrão e inicialize a lista dentro da função.</span>
+<span class="c1"># JEITO Certo: Use None como valor padrão e inicialize a lista dentro da função.</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">adicionar_item</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">lista</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">lista</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">lista</span>
 
@@ -607,8 +608,8 @@ beatriz@outlook.com
 </div></blockquote>
 </section>
 </section>
-<section id="escolpo-global-e-escolpo-local">
-<h2><strong>Escolpo Global e Escolpo Local</strong><a class="headerlink" href="#escolpo-global-e-escolpo-local" title="Link to this heading">#</a></h2>
+<section id="escopo-global-e-escopo-local">
+<h2><strong>Escopo Global e Escopo Local</strong><a class="headerlink" href="#escopo-global-e-escopo-local" title="Link to this heading">#</a></h2>
 <p>O escopo determina onde uma variável pode ser acessada dentro do seu programa.</p>
 <ul class="simple">
 <li><p><strong>Escopo Global</strong>: Variáveis criadas fora de qualquer função. Elas são visíveis e podem ser lidas por qualquer parte do código no mesmo arquivo.</p></li>
@@ -692,7 +693,7 @@ beatriz@outlook.com
 </div>
 </div>
 <blockquote>
-<div><p>🎉 <strong>Parabéns!</strong> Você concluiu o módulo de Funções. Agora você sabe como encapsular lógicas em blocos reutilizáveis, reduzindo a repetição e deixando seus scripts muito mais organizados e fáceis de manter.escala!</p>
+<div><p>🎉 <strong>Parabéns!</strong> Você concluiu o módulo de Funções. Agora você sabe como encapsular lógicas em blocos reutilizáveis, reduzindo a repetição e deixando seus scripts muito mais organizados e fáceis de manter.</p>
 </div></blockquote>
 </section>
 </section>
@@ -761,7 +762,7 @@ beatriz@outlook.com
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sintax-basica"><strong>Sintax Básica</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sintaxe-basica"><strong>Sintaxe Básica</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-e-argumentos"><strong>Parâmetros e Argumentos</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-padrao-default"><strong>Parâmetros Padrão (Default)</strong></a></li>
 </ul>
@@ -769,7 +770,7 @@ beatriz@outlook.com
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retorno"><strong>Retorno</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escolpo-global-e-escolpo-local"><strong>Escolpo Global e Escolpo Local</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escopo-global-e-escopo-local"><strong>Escopo Global e Escopo Local</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empacotamento-de-argumentos-args-e-kwargs"><strong>Empacotamento de Argumentos (<code class="docutils literal notranslate"><span class="pre">*args</span></code> e <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>)</strong></a></li>
 </ul>
   </nav></div>
