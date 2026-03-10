@@ -1,0 +1,804 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Funções &#8212; Estudos Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'conteudo/07_Funcoes';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Estudos Python - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Estudos Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bem-vindo ao Aprenda Python!
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_Introducao_python.html"><strong>Sobre a Linguagem de Programação Python</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_Variaveis_e_Constantes.html"><strong>1. Variáveis e Constantes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_Tipos_Dados_Basicos.html"><strong>2. Tipos de dados fundamentais</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_Operadores_Basicos.html"><strong>3. Operadores Básicos</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_Interacao_Com_Usuario.html"><strong>4. Interação com o Usuário</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_Tipos_Dados_Compostos.html"><strong>5. Tipos de Dados Compostos</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_Controle_de_Fluxo.html"><strong>6. Controle de Fluxo</strong></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/BruninSouza/Ensino-Python/main?urlpath=tree/conteudo/07_Funcoes.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/BruninSouza/Ensino-Python/blob/main/conteudo/07_Funcoes.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/BruninSouza/Ensino-Python" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/BruninSouza/Ensino-Python/issues/new?title=Issue%20on%20page%20%2Fconteudo/07_Funcoes.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/conteudo/07_Funcoes.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Funções</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sintax-basica"><strong>Sintax Básica</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-e-argumentos"><strong>Parâmetros e Argumentos</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-padrao-default"><strong>Parâmetros Padrão (Default)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retorno"><strong>Retorno</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escolpo-global-e-escolpo-local"><strong>Escolpo Global e Escolpo Local</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empacotamento-de-argumentos-args-e-kwargs"><strong>Empacotamento de Argumentos (<code class="docutils literal notranslate"><span class="pre">*args</span></code> e <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>)</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="funcoes">
+<h1><strong>Funções</strong><a class="headerlink" href="#funcoes" title="Link to this heading">#</a></h1>
+<p>Uma função é um bloco de código independente que pode ser executado várias vezes em um programa. Ela pode receber entradas (parâmetros), processar dados e retornar uma saída.</p>
+<p>A principal característica de uma função é encapsular um conjunto de instruções, facilitando a reutilização e a manutenção do código.</p>
+<p>Ao usar funções, o código se torna mais simples e fácil de entender, pois cada função tem um objetivo específico.</p>
+<section id="sintax-basica">
+<h2><strong>Sintax Básica</strong><a class="headerlink" href="#sintax-basica" title="Link to this heading">#</a></h2>
+<p>Para criar uma função, usamos a palavra-chave <code class="docutils literal notranslate"><span class="pre">def</span></code>, seguida pelo nome da função e, opcionalmente, pelos parâmetros.</p>
+<p>A estrutura básica de uma função é a seguinte:</p>
+<ul class="simple">
+<li><p><strong>def</strong>: Palavra-chave que indica a definição de uma função.</p></li>
+<li><p><strong>nome_da_funcao</strong>: Nome descritivo que indica o que a função faz.</p></li>
+</ul>
+<p>Exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">dizer_ola</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Esta função apenas imprime uma saudação.&quot;&quot;&quot;</span> <span class="c1"># Docstring</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Olá! Bem-vindo ao mundo das funções.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Para usar, você precisa &quot;chamar&quot; a função</span>
+<span class="n">dizer_ola</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Olá! Bem-vindo ao mundo das funções.
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>🔴 <strong>Importante</strong>: Note o uso de <code class="docutils literal notranslate"><span class="pre">Docstring</span></code> no inicio da função, ele é utilizado para explicar o que a função faz.</p>
+</div></blockquote>
+<section id="parametros-e-argumentos">
+<h3><strong>Parâmetros e Argumentos</strong><a class="headerlink" href="#parametros-e-argumentos" title="Link to this heading">#</a></h3>
+<p>Apesar de serem <strong>opcionais</strong>, parâmetros e argumentos são necessários caso uma função deseje lidar com <strong>dados dinâmicos</strong>.</p>
+<ul class="simple">
+<li><p><strong>parâmetro</strong>: Valor que a função recebe para processar, sendo a variável listada entre parênteses na definição da função.</p></li>
+<li><p><strong>argumento</strong>: É o valor real enviado para a função quando ela é chamada.</p></li>
+</ul>
+<p>Exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">saudar_usuario</span><span class="p">(</span><span class="n">nome</span><span class="p">):</span> <span class="c1"># &#39;nome&#39; é o parâmetro</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Esta função apenas imprime uma saudação.&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Olá, </span><span class="si">{</span><span class="n">nome</span><span class="si">}</span><span class="s2">! Tudo bem?&quot;</span><span class="p">)</span>
+
+<span class="n">saudar_usuario</span><span class="p">(</span><span class="s2">&quot;Carlos&quot;</span><span class="p">)</span> <span class="c1"># &quot;Carlos&quot; é o argumento</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Olá, Carlos! Tudo bem?
+</pre></div>
+</div>
+</div>
+</div>
+<section id="parametros-padrao-default">
+<h4><strong>Parâmetros Padrão (Default)</strong><a class="headerlink" href="#parametros-padrao-default" title="Link to this heading">#</a></h4>
+<p>Às vezes, queremos que uma função tenha uma opção padrão, para que o usuário não precise preencher tudo todas as vezes. São valores atribuídos aos parâmetros no momento em que a função é definida. Para fazer isso, nós usamos o que chamamos <strong>parâmetros padrão</strong>.</p>
+<p>Eles servem como um valor de reserva, se você chamar a função sem passar esse dado, o sistema utiliza o valor padrão automaticamente, permitindo que a <strong>função</strong> seja flexível.</p>
+<p>Para utilizar criar um <strong>parâmetro padrão</strong> é bem simples, basta usar um operador de atribuição (<code class="docutils literal notranslate"><span class="pre">=</span></code>) após o nome do parâmetro e em seguida informar o valor padrão que ele terá.</p>
+<p>Exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">criar_email</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">dominio</span><span class="o">=</span><span class="s2">&quot;gmail.com&quot;</span><span class="p">):</span> <span class="c1"># gmail.com é o valor padrão para o parâmetro dominio</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nome</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">dominio</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Usando o padrão:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">criar_email</span><span class="p">(</span><span class="s2">&quot;Carlos&quot;</span><span class="p">))</span> <span class="c1"># carlos@gmail.com</span>
+
+<span class="c1"># Alterando o padrão:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">criar_email</span><span class="p">(</span><span class="s2">&quot;Beatriz&quot;</span><span class="p">,</span> <span class="n">dominio</span><span class="o">=</span><span class="s2">&quot;outlook.com&quot;</span><span class="p">))</span> <span class="c1"># beatriz@outlook.com</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>carlos@gmail.com
+beatriz@outlook.com
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Atenção</strong>: Parâmetros com valor padrão devem sempre vir após os parâmetros obrigatórios. Caso contrário, o Python não saberia quem é quem.</p>
+</div></blockquote>
+<blockquote>
+<div><p>🔴 <strong>Importante</strong>: Nunca, jamais use objetos mutáveis (listas ou dicionários) como valores padrão. O Python avalia o valor padrão apenas uma vez, na definição da função, e não a cada chamada.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># JEITO ERRADO: Use uma lista como valor padrão.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">adicionar_item</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">lista</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lista</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">adicionar_item</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># [1]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">adicionar_item</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># [1, 2] - A lista é a mesma da chamada anterior!</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># JEITO Certo: Use None como valor padrão padrão e inicialize a lista dentro da função.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">adicionar_item</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">lista</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lista</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">adicionar_item</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># [1]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">adicionar_item</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># [2] - Agora é iniciada uma lista diferente!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1]
+[1, 2]
+
+[1]
+[2]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="retorno">
+<h3><strong>Retorno</strong><a class="headerlink" href="#retorno" title="Link to this heading">#</a></h3>
+<p>Normalmente, ao executar uma função, desejamos que a função calcule algo e nos devolva este valor para usarmos mais tarde. Para fazermos isto, utilizamos a palavra-chave <code class="docutils literal notranslate"><span class="pre">return</span></code> juntamente com o valor que desejamos que seja devolvido.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calcular_area_quadrado</span><span class="p">(</span><span class="n">lado</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Esta função calcula a área de um quadrado.&quot;&quot;&quot;</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">lado</span> <span class="o">*</span> <span class="n">lado</span>
+    <span class="k">return</span> <span class="n">area</span> <span class="c1"># Devolve o resultado</span>
+
+<span class="c1"># Agora posso guardar esse resultado em uma variável</span>
+<span class="n">resultado_area</span> <span class="o">=</span> <span class="n">calcular_area_quadrado</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A área é </span><span class="si">{</span><span class="n">resultado_area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># Saída: 25</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A área é 25
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>🔴 <strong>Importante</strong>: Assim que o Python encontra a palavra return, ele sai da função imediatamente. Qualquer código abaixo do return dentro da função será ignorado.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="escolpo-global-e-escolpo-local">
+<h2><strong>Escolpo Global e Escolpo Local</strong><a class="headerlink" href="#escolpo-global-e-escolpo-local" title="Link to this heading">#</a></h2>
+<p>O escopo determina onde uma variável pode ser acessada dentro do seu programa.</p>
+<ul class="simple">
+<li><p><strong>Escopo Global</strong>: Variáveis criadas fora de qualquer função. Elas são visíveis e podem ser lidas por qualquer parte do código no mesmo arquivo.</p></li>
+<li><p><strong>Escopo Local</strong>: Variáveis criadas dentro de uma função. Elas pertencem exclusivamente àquele bloco e deixam de existir assim que a função termina sua execução.</p></li>
+</ul>
+<p>Exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variável no Escopo Global</span>
+<span class="n">escola</span> <span class="o">=</span> <span class="s2">&quot;Python Academy&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">matricular</span><span class="p">():</span>
+    <span class="c1"># Variável no Escopo Local</span>
+    <span class="n">aluno</span> <span class="o">=</span> <span class="s2">&quot;Lucas&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">aluno</span><span class="si">}</span><span class="s2"> foi matriculado na </span><span class="si">{</span><span class="n">escola</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+<span class="n">matricular</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lucas foi matriculado na Python Academy.
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>ATENÇÃO</strong>: Caso print(aluno) estivesse fora do escolpo da função, teríamos causado um NameError, pois ‘aluno’ só existe dentro da função.</p>
+</div></blockquote>
+</section>
+<section id="empacotamento-de-argumentos-args-e-kwargs">
+<h2><strong>Empacotamento de Argumentos (<code class="docutils literal notranslate"><span class="pre">*args</span></code> e <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>)</strong><a class="headerlink" href="#empacotamento-de-argumentos-args-e-kwargs" title="Link to this heading">#</a></h2>
+<p>O empacotamento permite que uma função receba um número variável de informações sem que você precise definir cada uma delas individualmente.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">*args</span> <span class="pre">(Arguments)</span></code>: Utilizado para capturar múltiplos valores enviados de forma sequencial. O Python agrupa todos esses valores em uma <strong>Tupla</strong> (uma lista que não pode ser alterada).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**kwargs</span> <span class="pre">(Keyword</span> <span class="pre">Arguments)</span></code>: Utilizado para capturar múltiplos valores enviados com uma “etiqueta” (nome=valor). O Python organiza essas informações em um <strong>Dicionário</strong> (relação de chave e valor).</p></li>
+</ul>
+<p>Para usarmos ambos é bem simples, apenas precisamos colocar um asterisco (<code class="docutils literal notranslate"><span class="pre">*</span></code>) entes do nome do <strong>parâmetro</strong> caso ele seja um <code class="docutils literal notranslate"><span class="pre">*arg</span></code> e usar dois asterisco caso um <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>.</p>
+<p>Exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Utilizando *args</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calcular_media</span><span class="p">(</span><span class="o">*</span><span class="n">notas</span><span class="p">):</span>
+    <span class="c1"># notas é uma tupla: (8, 9, 10, ...)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">notas</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calcular_media</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span> <span class="c1"># Passando 3 valores</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calcular_media</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>     <span class="c1"># Passando 2 valores</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.0
+6.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Utilizando **kwargs</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">salvar_usuario</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="o">**</span><span class="n">dados</span><span class="p">):</span>
+    <span class="c1"># dados é um dicionário: {&quot;nome&quot;: &quot;Ana&quot;, &quot;idade&quot;: 25}</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Salvando usuário </span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">chave</span><span class="p">,</span> <span class="n">valor</span> <span class="ow">in</span> <span class="n">dados</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Atributo </span><span class="si">{</span><span class="n">chave</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">salvar_usuario</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="n">nome</span><span class="o">=</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="n">idade</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">cidade</span><span class="o">=</span><span class="s2">&quot;São Paulo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Salvando usuário 101...
+--- Atributo nome: Ana
+--- Atributo idade: 25
+--- Atributo cidade: São Paulo
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./conteudo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sintax-basica"><strong>Sintax Básica</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-e-argumentos"><strong>Parâmetros e Argumentos</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-padrao-default"><strong>Parâmetros Padrão (Default)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retorno"><strong>Retorno</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#escolpo-global-e-escolpo-local"><strong>Escolpo Global e Escolpo Local</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empacotamento-de-argumentos-args-e-kwargs"><strong>Empacotamento de Argumentos (<code class="docutils literal notranslate"><span class="pre">*args</span></code> e <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>)</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Bruno Souza
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
