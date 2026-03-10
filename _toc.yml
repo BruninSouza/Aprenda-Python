@@ -8,4 +8,7 @@ chapters:
 - file: conteudo/04_Interacao_Com_Usuario
 - file: conteudo/05_Tipos_Dados_Compostos
 - file: conteudo/06_Controle_de_Fluxo
+- file: conteudo/07_Funcoes
+- file: conteudo/08_Modulos_e_Pacotes
+- file: conteudo/09_POO
 
