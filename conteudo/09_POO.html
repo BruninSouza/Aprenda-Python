@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>9. Programação Orientada a Objetos (POO) &#8212; Estudos Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'conteudo/09_POO';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Estudos Python - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Estudos Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bem-vindo ao Aprenda Python!
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_Introducao_python.html"><strong>Sobre a Linguagem de Programação Python</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_Variaveis_e_Constantes.html"><strong>1. Variáveis e Constantes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_Tipos_Dados_Basicos.html"><strong>2. Tipos de dados fundamentais</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_Operadores_Basicos.html"><strong>3. Operadores Básicos</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_Interacao_Com_Usuario.html"><strong>4. Interação com o Usuário</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_Tipos_Dados_Compostos.html"><strong>5. Tipos de Dados Compostos</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_Controle_de_Fluxo.html"><strong>6. Controle de Fluxo</strong></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/BruninSouza/Ensino-Python/main?urlpath=tree/conteudo/09_POO.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/BruninSouza/Ensino-Python/blob/main/conteudo/09_POO.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/BruninSouza/Ensino-Python" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/BruninSouza/Ensino-Python/issues/new?title=Issue%20on%20page%20%2Fconteudo/09_POO.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/conteudo/09_POO.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>9. Programação Orientada a Objetos (POO)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-vs-objetos"><strong>Classes vs. Objetos</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criando-sua-primeira-classe"><strong>Criando sua Primeira Classe</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-construtor-init-e-o-self"><strong>O Construtor (<code class="docutils literal notranslate"><span class="pre">__init__</span></code>) e o <code class="docutils literal notranslate"><span class="pre">self</span></code></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instanciando-e-usando-objetos"><strong>Instanciando e Usando Objetos</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os-quatro-pilares-da-poo"><strong>Os Quatro Pilares da POO</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encapsulamento"><strong>Encapsulamento</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heranca"><strong>Herança</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polimorfismo"><strong>Polimorfismo</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abstracao"><strong>Abstração</strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="programacao-orientada-a-objetos-poo">
+<h1><strong>9. Programação Orientada a Objetos (POO)</strong><a class="headerlink" href="#programacao-orientada-a-objetos-poo" title="Link to this heading">#</a></h1>
+<p>Chegamos a um dos conceitos mais transformadores da computação moderna. Se até agora você aprendeu a criar ferramentas isoladas (Funções) e a organizar gavetas de dados (Listas e Dicionários), a <strong>Programação Orientada a Objetos (POO)</strong> ensinará você a construir sistemas inteligentes.</p>
+<p>A POO é um paradigma que permite estruturar o código de maneira mais próxima de como enxergamos o mundo real: focado em “coisas” (Objetos) e em como elas interagem entre si, unindo dados e ações em um só lugar.</p>
+<section id="classes-vs-objetos">
+<h2><strong>Classes vs. Objetos</strong><a class="headerlink" href="#classes-vs-objetos" title="Link to this heading">#</a></h2>
+<p>Para entender a diferença de forma simples, esqueça a tecnologia por um momento e pense em uma <strong>Forma de fazer biscoitos</strong>.</p>
+<ul class="simple">
+<li><p><strong>Classe (O Molde)</strong>: A classe é a forma de metal. Ela define o formato (digamos, um boneco ou uma estrela) e dita as regras do que o biscoito vai ser. No entanto, <strong>você não pode comer a forma</strong>. Ela não é o biscoito real, é apenas o molde que usamos para criá-lo.</p></li>
+<li><p><strong>Objeto (O Biscoito Real)</strong>: O objeto é o biscoito que saiu do forno. Usando aquela única forma de metal (a Classe), você pode criar dezenas de biscoitos reais (Objetos). E o mais legal: um biscoito pode ter cobertura de chocolate, outro de morango e outro de baunilha. Cada biscoito é único e tem suas próprias características (Atributos), mas todos foram criados a partir do mesmo molde.</p></li>
+</ul>
+<p>Na programação, chamamos o ato de “assar um novo biscoito usando a forma” de <strong>Instanciar um Objeto</strong>.</p>
+<p>Outro exemplo prático é um <strong>Formulário de Cadastro</strong> em branco:</p>
+<ul class="simple">
+<li><p>O papel em branco com os campos “Nome” e “Idade” é a <strong>Classe</strong>.</p></li>
+<li><p>O papel preenchido com “Maria, 25 anos” é o <strong>Objeto</strong>.</p></li>
+</ul>
+</section>
+<section id="criando-sua-primeira-classe">
+<h2><strong>Criando sua Primeira Classe</strong><a class="headerlink" href="#criando-sua-primeira-classe" title="Link to this heading">#</a></h2>
+<p>No Python, utilizamos a palavra reservada <code class="docutils literal notranslate"><span class="pre">class</span></code> (com a primeira letra sempre maiúscula por convenção) para definir o nosso molde.</p>
+<section id="o-construtor-init-e-o-self">
+<h3><strong>O Construtor (<code class="docutils literal notranslate"><span class="pre">__init__</span></code>) e o <code class="docutils literal notranslate"><span class="pre">self</span></code></strong><a class="headerlink" href="#o-construtor-init-e-o-self" title="Link to this heading">#</a></h3>
+<p>Toda classe costuma ter um método especial chamado <code class="docutils literal notranslate"><span class="pre">__init__</span></code> (inicializador). Ele é executado automaticamente assim que o objeto “nasce”.</p>
+<p>A palavra <code class="docutils literal notranslate"><span class="pre">self</span></code> é obrigatória e representa <strong>“este objeto em particular”</strong>. É a forma de a classe dizer: “estou guardando esta cor <em>neste</em> carro específico que acabei de criar”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Carro</span><span class="p">:</span>
+    <span class="c1"># O método __init__ inicializa as características (Atributos)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">cor</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="n">marca</span>     <span class="c1"># Atributo (Dado / Estado)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>   <span class="c1"># Atributo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cor</span> <span class="o">=</span> <span class="n">cor</span>         <span class="c1"># Atributo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocidade</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1"># Valor padrão</span>
+        
+    <span class="c1"># As ações que o objeto pode fazer (Métodos / Comportamentos)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">acelerar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incremento</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocidade</span> <span class="o">+=</span> <span class="n">incremento</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;O </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="si">}</span><span class="s2"> acelerou. Velocidade: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">velocidade</span><span class="si">}</span><span class="s2"> km/h&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="instanciando-e-usando-objetos">
+<h3><strong>Instanciando e Usando Objetos</strong><a class="headerlink" href="#instanciando-e-usando-objetos" title="Link to this heading">#</a></h3>
+<p>Agora que temos o “projeto” do carro, vamos fabricar (instanciar) dois carros diferentes e testar suas funções.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criando os objetos (Instanciação)</span>
+<span class="n">carro1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">(</span><span class="s2">&quot;Toyota&quot;</span><span class="p">,</span> <span class="s2">&quot;Corolla&quot;</span><span class="p">,</span> <span class="s2">&quot;Prata&quot;</span><span class="p">)</span>
+<span class="n">carro2</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">(</span><span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;Mustang&quot;</span><span class="p">,</span> <span class="s2">&quot;Vermelho&quot;</span><span class="p">)</span>
+
+<span class="c1"># Acessando os atributos e métodos</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Meu carro é um </span><span class="si">{</span><span class="n">carro1</span><span class="o">.</span><span class="n">marca</span><span class="si">}</span><span class="s2"> da cor </span><span class="si">{</span><span class="n">carro1</span><span class="o">.</span><span class="n">cor</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="n">carro1</span><span class="o">.</span><span class="n">acelerar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">carro2</span><span class="o">.</span><span class="n">acelerar</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span> <span class="c1"># Cada objeto mantém sua própria velocidade de forma independente</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Meu carro é um Toyota da cor Prata.
+O Corolla acelerou. Velocidade: 30 km/h
+O Mustang acelerou. Velocidade: 80 km/h
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="os-quatro-pilares-da-poo">
+<h2><strong>Os Quatro Pilares da POO</strong><a class="headerlink" href="#os-quatro-pilares-da-poo" title="Link to this heading">#</a></h2>
+<p>Se criar Classes e Objetos é o vocabulário básico, os <strong>Quatro Pilares</strong> são as leis da física desse nosso universo virtual. Eles definem como os objetos devem ser construídos para garantir segurança, reutilização e flexibilidade.</p>
+<section id="encapsulamento">
+<h3><strong>Encapsulamento</strong><a class="headerlink" href="#encapsulamento" title="Link to this heading">#</a></h3>
+<p>É a prática de esconder os detalhes internos de funcionamento de um objeto e proteger seus dados contra modificações indevidas feitas de fora da classe. Imagine o motor de um carro: você interage com o pedal (interface), mas os pistões e as correias ficam escondidos e protegidos sob o capô.</p>
+<p>Em Python, indicamos que um atributo não deve ser acessado diretamente usando underscores (<code class="docutils literal notranslate"><span class="pre">_</span></code> ou <code class="docutils literal notranslate"><span class="pre">__</span></code>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ContaBancaria</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">titular</span><span class="p">,</span> <span class="n">saldo_inicial</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">titular</span> <span class="o">=</span> <span class="n">titular</span>
+        <span class="c1"># O duplo underscore indica que este atributo é &quot;privado&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__saldo</span> <span class="o">=</span> <span class="n">saldo_inicial</span> 
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">depositar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">valor</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__saldo</span> <span class="o">+=</span> <span class="n">valor</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">exibir_saldo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># O saldo só pode ser lido de forma controlada através deste método</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saldo: R$ </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__saldo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">conta</span> <span class="o">=</span> <span class="n">ContaBancaria</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">conta</span><span class="o">.</span><span class="n">depositar</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">conta</span><span class="o">.</span><span class="n">exibir_saldo</span><span class="p">()</span> <span class="c1"># Correto.</span>
+<span class="c1"># print(conta.__saldo) -&gt; Erro! O Python protege o acesso direto a este atributo.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saldo: R$ 1500
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="heranca">
+<h3><strong>Herança</strong><a class="headerlink" href="#heranca" title="Link to this heading">#</a></h3>
+<p>A Herança permite criar uma nova classe (Subclasse / Filha) baseada em uma classe já existente (Superclasse / Pai). A classe filha herda os atributos e métodos do pai, podendo adicionar coisas novas. Isso evita que você tenha que reescrever código do zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Superclasse (Pai)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nome</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="n">nome</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">comer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nome</span><span class="si">}</span><span class="s2"> está se alimentando.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Subclasse (Filha) - Recebe (Animal) entre parênteses</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Cachorro</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">latir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Au au!&quot;</span><span class="p">)</span>
+
+<span class="n">rex</span> <span class="o">=</span> <span class="n">Cachorro</span><span class="p">(</span><span class="s2">&quot;Rex&quot;</span><span class="p">)</span>
+<span class="n">rex</span><span class="o">.</span><span class="n">comer</span><span class="p">()</span> <span class="c1"># Método herdado da classe pai</span>
+<span class="n">rex</span><span class="o">.</span><span class="n">latir</span><span class="p">()</span> <span class="c1"># Método exclusivo da classe filha</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rex está se alimentando.
+Au au!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="polimorfismo">
+<h3><strong>Polimorfismo</strong><a class="headerlink" href="#polimorfismo" title="Link to this heading">#</a></h3>
+<p>Polimorfismo significa que objetos de classes diferentes podem responder ao mesmo comando (método) de formas diferentes. Geralmente, ocorre quando as classes filhas sobrescrevem um método do pai para adaptá-lo às suas próprias necessidades.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Passaro</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mover</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Voando pelo céu.&quot;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Peixe</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mover</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Nadando no oceano.&quot;</span>
+
+<span class="c1"># Lista com objetos de tipos diferentes</span>
+<span class="n">animais</span> <span class="o">=</span> <span class="p">[</span><span class="n">Passaro</span><span class="p">(</span><span class="s2">&quot;Piu&quot;</span><span class="p">),</span> <span class="n">Peixe</span><span class="p">(</span><span class="s2">&quot;Nemo&quot;</span><span class="p">)]</span>
+
+<span class="c1"># O mesmo comando (.mover()) gera resultados específicos para cada objeto</span>
+<span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animais</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">animal</span><span class="o">.</span><span class="n">nome</span><span class="si">}</span><span class="s2"> está </span><span class="si">{</span><span class="n">animal</span><span class="o">.</span><span class="n">mover</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Piu está Voando pelo céu.
+Nemo está Nadando no oceano.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="abstracao">
+<h3><strong>Abstração</strong><a class="headerlink" href="#abstracao" title="Link to this heading">#</a></h3>
+<p>A Abstração significa focar apenas nas características essenciais de um objeto e esconder a complexidade (“o como” ele faz as coisas) por trás de comandos simples e diretos.</p>
+<p>Pense no exemplo do nosso <code class="docutils literal notranslate"><span class="pre">Carro</span></code>: quando você senta no banco do motorista e gira a chave, o carro liga. Você não precisa saber como o motor injeta o combustível, como as velas geram a faísca ou como a bateria distribui a energia. O carro <strong>abstrai</strong> toda essa engenharia complexa e te entrega apenas uma interface simples: a chave na ignição.</p>
+<p>Na programação, fazemos a mesma coisa. Criamos classes com métodos simples para quem vai usar o código, enquanto escondemos as regras difíceis em métodos e atributos privados (usando o Encapsulamento que vimos acima).</p>
+<p>Veja como podemos abstrair a lógica de ligar um carro no código:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Carro</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modelo</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__combustivel</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Atributo privado</span>
+
+    <span class="c1"># Métodos privados: A engenharia interna que o motorista não precisa ver</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__injetar_combustivel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__combustivel</span> <span class="o">-=</span> <span class="mi">2</span>
+        
+    <span class="k">def</span><span class="w"> </span><span class="nf">__gerar_faisca</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span> <span class="c1"># Lógica complexa do motor...</span>
+
+    <span class="c1"># Método público: A &quot;chave&quot; que o motorista usa (A Abstração)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ligar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__combustivel</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__injetar_combustivel</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__gerar_faisca</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vrum! O </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="si">}</span><span class="s2"> está ligado e pronto para andar.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sem combustível!&quot;</span><span class="p">)</span>
+
+<span class="n">meu_carro</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">(</span><span class="s2">&quot;Mustang&quot;</span><span class="p">)</span>
+
+<span class="c1"># O usuário só precisa chamar um comando simples:</span>
+<span class="n">meu_carro</span><span class="o">.</span><span class="n">ligar</span><span class="p">()</span> 
+
+<span class="c1"># Ele não precisa (e nem deve) chamar meu_carro.__injetar_combustivel()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vrum! O Mustang está ligado e pronto para andar.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Neste exemplo, o método <code class="docutils literal notranslate"><span class="pre">ligar()</span></code> é a nossa abstração. Quem usa a classe Carro só precisa saber que esse método existe, sem precisar se preocupar com as etapas internas de injeção e faísca. Isso torna o código extremamente fácil de usar e diminui as chances de erros!</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./conteudo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-vs-objetos"><strong>Classes vs. Objetos</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criando-sua-primeira-classe"><strong>Criando sua Primeira Classe</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-construtor-init-e-o-self"><strong>O Construtor (<code class="docutils literal notranslate"><span class="pre">__init__</span></code>) e o <code class="docutils literal notranslate"><span class="pre">self</span></code></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instanciando-e-usando-objetos"><strong>Instanciando e Usando Objetos</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os-quatro-pilares-da-poo"><strong>Os Quatro Pilares da POO</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encapsulamento"><strong>Encapsulamento</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heranca"><strong>Herança</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polimorfismo"><strong>Polimorfismo</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abstracao"><strong>Abstração</strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Bruno Souza
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
