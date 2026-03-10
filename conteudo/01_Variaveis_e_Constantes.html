@@ -434,9 +434,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos">🎯 <strong>Objetivos</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis"><strong>Variáveis</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nomeclatura-de-variaveis-convencoes-pep-8"><strong>Nomeclatura de Variáveis (Convenções PEP 8)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nomenclatura-de-variaveis-convencoes-pep-8"><strong>Nomenclatura de Variáveis (Convenções PEP 8)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipagem-dinamica"><strong>Tipagem Dinâmica</strong></a></li>
 </ul>
 </li>
@@ -472,19 +471,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="variaveis-e-constantes">
 <h1><strong>1. Variáveis e Constantes</strong><a class="headerlink" href="#variaveis-e-constantes" title="Link to this heading">#</a></h1>
-<p>São recursos que permitem atribuirmos nomes a determinados valores. Alguns desse nomes possuem valores que podem variar (<strong>variáveis</strong>) e outros possuem valores fixos (<strong>constantes</strong>).</p>
-<section id="objetivos">
-<h2>🎯 <strong>Objetivos</strong><a class="headerlink" href="#objetivos" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Entender como o computador armazena informações na memória.</p></li>
-<li><p>Aprender a declarar variáveis e atribuir valores a elas.</p></li>
-<li><p>Compreender as regras e boas práticas de nomenclatura no Python.</p></li>
-<li><p>Diferenciar o conceito de variáveis e constantes.</p></li>
-</ul>
-</section>
+<p>São recursos que permitem atribuirmos nomes a determinados valores. Alguns desses nomes possuem valores que podem variar (<strong>variáveis</strong>) e outros possuem valores fixos (<strong>constantes</strong>).</p>
 <section id="variaveis">
 <h2><strong>Variáveis</strong><a class="headerlink" href="#variaveis" title="Link to this heading">#</a></h2>
-<p>Variáveis podem ser entendidas como etiquetas que você cola em caixas para guardar diferentes tipos de informações (<strong>valores/dados</strong>) em seu programam. Em termos mais ciêntíficos, Variáveis são usadas para armazenar informações a serem referenciadas e manipuladas em um programa de computador, tendo como objetivo <strong>rotular e armazenar dados na memória</strong>.</p>
+<p>Variáveis podem ser entendidas como etiquetas que você cola em caixas para guardar diferentes tipos de informações (<strong>valores/dados</strong>) em seu programa. Em termos mais científicos, Variáveis são usadas para armazenar informações a serem referenciadas e manipuladas em um programa de computador, tendo como objetivo <strong>rotular e armazenar dados na memória</strong>.</p>
 <p>Em Python, as variáveis não precisam de uma declaração para reservar espaço na memória, a declaração ocorre automaticamente quando você atribui um valor à variável, ou seja, em Python, você cria uma variável simplesmente atribuindo um valor a um nome.</p>
 <p>O sinal <code class="docutils literal notranslate"><span class="pre">=</span></code> é usado como operador de atribuição, ou seja, ele que dá valor a uma variável.</p>
 <p>Exemplos:</p>
@@ -511,19 +501,19 @@ document.write(`
 <span class="n">esta_aprovado</span> <span class="o">-&gt;</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<section id="nomeclatura-de-variaveis-convencoes-pep-8">
-<h3><strong>Nomeclatura de Variáveis (Convenções PEP 8)</strong><a class="headerlink" href="#nomeclatura-de-variaveis-convencoes-pep-8" title="Link to this heading">#</a></h3>
+<section id="nomenclatura-de-variaveis-convencoes-pep-8">
+<h3><strong>Nomenclatura de Variáveis (Convenções PEP 8)</strong><a class="headerlink" href="#nomenclatura-de-variaveis-convencoes-pep-8" title="Link to this heading">#</a></h3>
 <p>A comunidade Python segue um guia de estilo chamado <strong>PEP 8</strong>. Para nomes de variáveis, a norma é:</p>
 <ul class="simple">
 <li><p>Sempre usar letras minúsculas;</p></li>
-<li><p>Podem haver números no nome de uma variável (ex: <code class="docutils literal notranslate"><span class="pre">lista1</span></code>), mas nunca carcteres ilegais (ex: <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>);</p></li>
+<li><p>Podem haver números no nome de uma variável (ex: <code class="docutils literal notranslate"><span class="pre">lista1</span></code>), mas nunca caracteres ilegais (ex: <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>);</p></li>
 <li><p>Palavras separadas por underscores <code class="docutils literal notranslate"><span class="pre">_</span></code> para melhorar a legibilidade (isso é chamado de estilo <code class="docutils literal notranslate"><span class="pre">snake_case</span></code>);</p></li>
 <li><p>Nomes devem ser descritivos. Por exemplo, <code class="docutils literal notranslate"><span class="pre">preco_unitario</span> <span class="pre">=</span> <span class="pre">10</span></code> é muito mais claro que <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10</span></code>.
 **</p></li>
 <li><p>Evitar usar nomes de <strong>funções</strong> ou <strong>palavras-chave</strong> da linguagem como nomes de variáveis (ex:<code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>).</p></li>
 </ul>
 <blockquote>
-<div><p>⚠️ <strong>Atenção</strong>: Nunca use números no começo do nome de uma variável (ex: 1nome), pois gerará um erro de síntaxe.</p>
+<div><p>⚠️ <strong>Atenção</strong>: Nunca use números no começo do nome de uma variável (ex: 1nome), pois gerará um erro de sintaxe.</p>
 </div></blockquote>
 </section>
 <section id="tipagem-dinamica">
@@ -559,14 +549,14 @@ Olá, mundo! &lt;class &#39;str&#39;&gt;
 <li><p>Dentro dos parênteses <code class="docutils literal notranslate"><span class="pre">()</span></code> é definido <strong>qual variável deve ter seu tipo retornado</strong>.</p></li>
 </ul>
 </li>
-<li><p>Nesses resultados, a palavra <code class="docutils literal notranslate"><span class="pre">class</span></code> (classe) é usada no sentido de <strong>categoria</strong>; um tipo é uma <strong>catagoria de valores</strong>.</p></li>
+<li><p>Nesses resultados, a palavra <code class="docutils literal notranslate"><span class="pre">class</span></code> (classe) é usada no sentido de <strong>categoria</strong>; um tipo é uma <strong>categoria de valores</strong>.</p></li>
 </ul>
-<p>Note que usamos a mesma variável duas vezes, mas seu valor muda ao decorrer dos exemplos, isso ocorre porque seu valor foi <strong>reatribuido</strong>, ou seja, demos outro valor a uma variável já existente.</p>
+<p>Note que usamos a mesma variável duas vezes, mas seu valor muda ao decorrer dos exemplos, isso ocorre porque seu valor foi <strong>reatribuído</strong>, ou seja, demos outro valor a uma variável já existente.</p>
 </section>
 </section>
 <section id="constantes">
 <h2><strong>Constantes</strong><a class="headerlink" href="#constantes" title="Link to this heading">#</a></h2>
-<p>Em muitas linguagens de programação, constantes é uma variável cujo valor não pode ser alterado após sua definição. Em Python, estritamente falando, não existe <strong>constantes verdadeiras</strong> no sentido de que o interpretador impeça a sua alteração.</p>
+<p>Em muitas linguagens de programação, constantes são variáveis cujo valor não pode ser alterado após sua definição. Em Python, estritamente falando, não existem <strong>constantes verdadeiras</strong> no sentido de que o interpretador impeça a sua alteração.</p>
 <p>No entanto, a convenção na comunidade Python para indicar que uma variável deve ser tratada como uma constante é nomeá-la usando <strong>todas as letras maiúsculas</strong>, com palavras separadas por underscores <code class="docutils literal notranslate"><span class="pre">_</span></code>, se necessário.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -587,7 +577,7 @@ Olá, mundo! &lt;class &#39;str&#39;&gt;
 <h2><strong>Extra: Comentários e Uso da Função <code class="docutils literal notranslate"><span class="pre">print()</span></code></strong><a class="headerlink" href="#extra-comentarios-e-uso-da-funcao-print" title="Link to this heading">#</a></h2>
 <section id="comentarios">
 <h3><strong>Comentários</strong><a class="headerlink" href="#comentarios" title="Link to this heading">#</a></h3>
-<p>Conforme os programas ficam maiores e mais complicados, eles acabam ficando <strong>difíceis de lê</strong>. Pensando nisso, podemos usar comentários para explicar o que o programa está fazendo naquele trecho de código, fazendo a leitura ficar mais fácil.</p>
+<p>Conforme os programas ficam maiores e mais complicados, eles acabam ficando <strong>difíceis de ler</strong>. Pensando nisso, podemos usar comentários para explicar o que o programa está fazendo naquele trecho de código, fazendo a leitura ficar mais fácil.</p>
 <p>Comentários são <strong>linhas de texto que o interpretador Python ignora durante a execução do código</strong>, ou seja, eles não interferem nas funcionalidades do programa.</p>
 <section id="comentarios-de-linha-unica">
 <h4><strong>Comentários de linha única</strong><a class="headerlink" href="#comentarios-de-linha-unica" title="Link to this heading">#</a></h4>
@@ -741,7 +731,7 @@ Linha 3
 </section>
 <section id="imprimir-usando-variaveis">
 <h4><strong>Imprimir usando variáveis</strong><a class="headerlink" href="#imprimir-usando-variaveis" title="Link to this heading">#</a></h4>
-<p>Já vimos anteriormente que para exibir uma variável basta colocála dentro do print que ela será exibida, assim:</p>
+<p>Já vimos anteriormente que para exibir uma variável basta colocá-la dentro do print que ela será exibida, assim:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sobrenome</span> <span class="o">=</span> <span class="s2">&quot;Madalena&quot;</span>
@@ -773,12 +763,12 @@ Linha 3
 </div>
 </div>
 <p>O <code class="docutils literal notranslate"><span class="pre">f</span></code> prefixado (no inicio) da string indica que essa será uma string formatada, para que seja possível inserir uma variável, expressão ou função dentro da string é necessário que a mesma esteja entre chaves <code class="docutils literal notranslate"><span class="pre">{}</span></code> para que o Python a interprete como ela é de fato e não uma string.</p>
-<p>Além de formatar o texto, f-strings também conseguem formatar valores númericos, podendo adicionar especificadores, como casas decimais, número de zero à esquerda, porcentagem e etc.</p>
+<p>Além de formatar o texto, f-strings também conseguem formatar valores numéricos, podendo adicionar especificadores, como casas decimais, número de zero à esquerda, porcentagem e etc.</p>
 </section>
 <section id="formatar-numeros-com-especificadores">
 <h5><strong>Formatar números com especificadores</strong><a class="headerlink" href="#formatar-numeros-com-especificadores" title="Link to this heading">#</a></h5>
 <ul class="simple">
-<li><p><strong>Casas decimais</strong>: ao final das chaves <code class="docutils literal notranslate"><span class="pre">{}</span></code> de uma string formatada, use dois pontos <code class="docutils literal notranslate"><span class="pre">:</span></code> para indicar que irá fazer uma especificação de formatação, em seguida o ponto <code class="docutils literal notranslate"><span class="pre">.</span></code> junto de algum número para indicar quantas casas decimais devem ser imprimidas na saída.</p></li>
+<li><p><strong>Casas decimais</strong>: ao final das chaves <code class="docutils literal notranslate"><span class="pre">{}</span></code> de uma string formatada, use dois pontos <code class="docutils literal notranslate"><span class="pre">:</span></code> para indicar que irá fazer uma especificação de formatação, em seguida o ponto <code class="docutils literal notranslate"><span class="pre">.</span></code> junto de algum número para indicar quantas casas decimais devem ser impressas na saída.</p></li>
 </ul>
 <blockquote>
 <div><p>Se o valor original tiver mais casas decimais que a quantidade especificada, o Python arrendonda o valor</p>
@@ -788,7 +778,7 @@ Linha 3
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mf">3.455</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Seu número é: </span><span class="si">{</span><span class="n">num</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># Faz o número imprimido ter apenas 2 casas decimais</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Seu número é: </span><span class="si">{</span><span class="n">num</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># Faz o número impresso ter apenas 2 casas decimais</span>
 </pre></div>
 </div>
 </div>
@@ -799,7 +789,7 @@ Linha 3
 </div>
 </div>
 <ul class="simple">
-<li><p><strong>Separador de milhar</strong>: Após os dois pontos <code class="docutils literal notranslate"><span class="pre">:</span></code> selecione entre ponto ou vírgula, a depender do idioma, para indicar como as casas de milahres devem ser separadas.</p></li>
+<li><p><strong>Separador de milhar</strong>: Após os dois pontos <code class="docutils literal notranslate"><span class="pre">:</span></code> selecione entre ponto ou vírgula, a depender do idioma, para indicar como as casas de milhares devem ser separadas.</p></li>
 </ul>
 <p>Exemplo (usando o modelo em inglês):</p>
 <div class="cell docutils container">
@@ -847,7 +837,7 @@ Linha 3
 </div>
 </div>
 <ul class="simple">
-<li><p><strong>Preenchimento</strong>: Existe 3 tipos de preenchimentos, o à esquerda, à direita e centralido. Para usá-los basta seguir o exemplo:</p></li>
+<li><p><strong>Preenchimento</strong>: Existe 3 tipos de preenchimentos, o à esquerda, à direita e centralizado. Para usá-los basta seguir o exemplo:</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -877,7 +867,7 @@ Linha 3
 <td class="text-center"><p>Alinha à direita</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
-<td class="text-center"><p>ALinha à esquerda</p></td>
+<td class="text-center"><p>Alinha à esquerda</p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">^</span></code></p></td>
 <td class="text-center"><p>Centraliza</p></td>
@@ -961,9 +951,8 @@ Linha 3
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos">🎯 <strong>Objetivos</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis"><strong>Variáveis</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nomeclatura-de-variaveis-convencoes-pep-8"><strong>Nomeclatura de Variáveis (Convenções PEP 8)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nomenclatura-de-variaveis-convencoes-pep-8"><strong>Nomenclatura de Variáveis (Convenções PEP 8)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipagem-dinamica"><strong>Tipagem Dinâmica</strong></a></li>
 </ul>
 </li>

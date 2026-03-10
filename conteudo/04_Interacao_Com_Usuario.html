@@ -441,7 +441,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boas-praticas-de-prompts-e-feedback"><strong>Boas práticas de Prompts e Feedback</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-cenarios-de-entradas-mais-elaborados"><strong>Extra: Cenários de Entradas Mais Elaborados</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplas-entradas-numa-unica-linha"><strong>Multiplas entradas numa única linha</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplas-entradas-numa-unica-linha"><strong>Múltiplas entradas numa única linha</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entrada-de-senhas"><strong>Entrada de Senhas</strong></a></li>
 </ul>
 </li>
@@ -461,7 +461,7 @@ document.write(`
 <p>Agora que já aprendemos sobre variáveis, constantes, tipos de dados e operadores, vamos aprender a como tornar nossos programas interativos, para que possam receber dados do usuário em tempo de execução.</p>
 <section id="funcao-input">
 <h2><strong>Função <code class="docutils literal notranslate"><span class="pre">input()</span></code></strong><a class="headerlink" href="#funcao-input" title="Link to this heading">#</a></h2>
-<p>A função <code class="docutils literal notranslate"><span class="pre">input()</span></code> pausa a execução do programa e espera que o usuário digite algo no console, normalmente um valor ou informação que foi solicitada, em seguida o usuário apenas percisa pressionar Enter e o programa seguirá seu fluxo padrão.</p>
+<p>A função <code class="docutils literal notranslate"><span class="pre">input()</span></code> pausa a execução do programa e espera que o usuário digite algo no console, normalmente um valor ou informação que foi solicitada, em seguida o usuário apenas precisa pressionar Enter e o programa seguirá seu fluxo padrão.</p>
 <p>Sua sintaxe é bem simples: <code class="docutils literal notranslate"><span class="pre">variavel</span> <span class="pre">=</span> <span class="pre">input()</span></code>, apenas com isso o programa entenderá que o usuário deverá digitar alguma informação.</p>
 <ul class="simple">
 <li><p>também é possível exibir uma mensagem (prompt) ao usuário para melhor instruí-lo sobre a informação que o programa espera receber, como veremos no exemplo a seguir:</p></li>
@@ -513,7 +513,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Por isso devemos converter a string utilizando os metodos de conversão que já aprendemos anteriormente na <code class="docutils literal notranslate"><span class="pre">Aula</span> <span class="pre">02</span></code>.</p>
+<p>Por isso devemos converter a string utilizando os métodos de conversão que já aprendemos anteriormente na <code class="docutils literal notranslate"><span class="pre">Aula</span> <span class="pre">02</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idade_texto</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite sua idade: &quot;</span><span class="p">)</span>
@@ -534,8 +534,8 @@ document.write(`
 </section>
 <section id="blocos-try-except">
 <h2><strong>Blocos <code class="docutils literal notranslate"><span class="pre">try-except</span></code></strong><a class="headerlink" href="#blocos-try-except" title="Link to this heading">#</a></h2>
-<p>Agora que aprendemos sobre <code class="docutils literal notranslate"><span class="pre">input()</span></code> e como converter os dados de entrada, vamos aprender a tratar possíveis erros que podem vir a surgir caso o usuário insirá uma entrada incorreta no programa, assim teremos uma melhor interação com o usuário dando-lhes instruções claras sobre o erro.</p>
-<p>O bloco <code class="docutils literal notranslate"><span class="pre">try-except</span></code> é uma ótima forma de tratamentos de erros, ele se baseia no <code class="docutils literal notranslate"><span class="pre">valueError</span></code> (erro de valor), que trata-se de uma exceção que dispara quando uma função recebe um argumento/valor com um tipo de dado correto (existente), mas o argumento/valor é inapropriado para a operação que deveria ser executada. Em resumo,  é uma forma do programa dizer que o valor fornecido para operação é inválido. Veja o exemplo a seguir:</p>
+<p>Agora que aprendemos sobre <code class="docutils literal notranslate"><span class="pre">input()</span></code> e como converter os dados de entrada, vamos aprender a tratar possíveis erros que podem vir a surgir caso o usuário insira uma entrada incorreta no programa, assim teremos uma melhor interação com o usuário dando-lhes instruções claras sobre o erro.</p>
+<p>O bloco <code class="docutils literal notranslate"><span class="pre">try-except</span></code> é uma ótima forma de tratamentos de erros, ele se baseia no <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> (erro de valor), que trata-se de uma exceção que dispara quando uma função recebe um argumento/valor com um tipo de dado correto (existente), mas o argumento/valor é inapropriado para a operação que deveria ser executada. Em resumo,  é uma forma do programa dizer que o valor fornecido para operação é inválido. Veja o exemplo a seguir:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idade_texto</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite sua idade: &quot;</span><span class="p">)</span>
@@ -562,7 +562,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Resumidamente falando, <code class="docutils literal notranslate"><span class="pre">try</span></code> tenta executar uma instrução contida em sey bloco de código, nesse caso é converter a entrada do usuário para um inteiro (<code class="docutils literal notranslate"><span class="pre">int</span></code>), caso o usuário insira um entrada inválida no programa (ex: inserindo uma letra), a exceção (<code class="docutils literal notranslate"><span class="pre">except</span></code>) error de valor (<code class="docutils literal notranslate"><span class="pre">valueError</span></code>) é disparada e seu bloco de código é executado.</p>
+<p>Resumidamente falando, <code class="docutils literal notranslate"><span class="pre">try</span></code> tenta executar uma instrução contida em seu bloco de código, nesse caso é converter a entrada do usuário para um inteiro (<code class="docutils literal notranslate"><span class="pre">int</span></code>), caso o usuário insira uma entrada inválida no programa (ex: inserindo uma letra), a exceção (<code class="docutils literal notranslate"><span class="pre">except</span></code>) erro de valor (<code class="docutils literal notranslate"><span class="pre">valueError</span></code>) é disparada e seu bloco de código é executado.</p>
 <section id="observacao">
 <h3><strong>Observação</strong><a class="headerlink" href="#observacao" title="Link to this heading">#</a></h3>
 <p>Blocos <code class="docutils literal notranslate"><span class="pre">try-except</span></code> podem ser usados para verificar erros de qualquer tipo de operação, seja converter valores, verificar dados de entrada e afins.</p>
@@ -570,7 +570,7 @@ document.write(`
 </section>
 <section id="boas-praticas-de-prompts-e-feedback">
 <h2><strong>Boas práticas de Prompts e Feedback</strong><a class="headerlink" href="#boas-praticas-de-prompts-e-feedback" title="Link to this heading">#</a></h2>
-<p>Clareza com o usuário é fundamental, <code class="docutils literal notranslate"><span class="pre">prompts</span></code> devem ser descritivos para que o usuário não se confunda e insira informações errada, enquanto <code class="docutils literal notranslate"><span class="pre">feedbacks</span></code> são úteis para confirmar se o que o usuário inseriu está correto, especialmente para dados críticos.</p>
+<p>Clareza com o usuário é fundamental, <code class="docutils literal notranslate"><span class="pre">prompts</span></code> devem ser descritivos para que o usuário não se confunda e insira informações erradas, enquanto <code class="docutils literal notranslate"><span class="pre">feedbacks</span></code> são úteis para confirmar se o que o usuário inseriu está correto, especialmente para dados críticos.</p>
 <p><strong>Tipos de prompts</strong>:</p>
 <ul class="simple">
 <li><p>Ruim: input(“Valor:”) (Valor de quê? Em qual formato?)</p></li>
@@ -590,7 +590,7 @@ document.write(`
 </div>
 </div>
 <ul class="simple">
-<li><p><strong>Mensagem de Erro construtivas</strong>: Invés de apenas “Erro”, diga ao usuário o que deu errado e como corrigir.</p></li>
+<li><p><strong>Mensagem de Erro construtivas</strong>: Ao invés de apenas “Erro”, diga ao usuário o que deu errado e como corrigir.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -609,7 +609,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nome</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite seu nome:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nome registrado com sucessor!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nome registrado com sucesso!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -624,7 +624,7 @@ document.write(`
 <h2><strong>Extra: Cenários de Entradas Mais Elaborados</strong><a class="headerlink" href="#extra-cenarios-de-entradas-mais-elaborados" title="Link to this heading">#</a></h2>
 <p>Aqui veremos outras maneiras de permitir que o usuário consiga inserir dados no programa além da função <code class="docutils literal notranslate"><span class="pre">input()</span></code>.</p>
 <section id="multiplas-entradas-numa-unica-linha">
-<h3><strong>Multiplas entradas numa única linha</strong><a class="headerlink" href="#multiplas-entradas-numa-unica-linha" title="Link to this heading">#</a></h3>
+<h3><strong>Múltiplas entradas numa única linha</strong><a class="headerlink" href="#multiplas-entradas-numa-unica-linha" title="Link to this heading">#</a></h3>
 <p>Às vezes, podemos querer que o usuário insira vários dados de uma vez, separados por um caractere (como vírgula ou espaço). A função <code class="docutils literal notranslate"><span class="pre">split()</span></code> é perfeita para isso.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -634,9 +634,9 @@ document.write(`
 
     <span class="n">partes</span> <span class="o">=</span> <span class="n">nome_e_idade</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span> <span class="c1"># Divide a string em uma lista onde houver &quot;,&quot;</span>
 
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">partes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># Verifica se a lista possue exatamente 2 elementos dentro dela</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">partes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># Verifica se a lista possui exatamente 2 elementos dentro dela</span>
 
-        <span class="n">nome</span> <span class="o">=</span> <span class="n">partes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1"># .strib() remove espaços extras</span>
+        <span class="n">nome</span> <span class="o">=</span> <span class="n">partes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1"># .strip() remove espaços extras</span>
         <span class="n">idade_str</span> <span class="o">=</span> <span class="n">partes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
         <span class="n">idade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">idade_str</span><span class="p">)</span> <span class="c1"># Converte a string para inteiro</span>
 
@@ -644,7 +644,7 @@ document.write(`
 
     <span class="k">else</span><span class="p">:</span>  <span class="c1"># Caso a lista não possua exatamente dois valores esse bloco de código é executado</span>
 
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Formato inválido, Use: Nome,Idade&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Formato inválido. Use: Nome,Idade&quot;</span><span class="p">)</span>
 
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erro ao converter a idade para inteiro. Verifique a entrada.&quot;</span><span class="p">)</span>
@@ -759,7 +759,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boas-praticas-de-prompts-e-feedback"><strong>Boas práticas de Prompts e Feedback</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-cenarios-de-entradas-mais-elaborados"><strong>Extra: Cenários de Entradas Mais Elaborados</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplas-entradas-numa-unica-linha"><strong>Multiplas entradas numa única linha</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplas-entradas-numa-unica-linha"><strong>Múltiplas entradas numa única linha</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entrada-de-senhas"><strong>Entrada de Senhas</strong></a></li>
 </ul>
 </li>

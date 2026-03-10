@@ -472,9 +472,9 @@ document.write(`
 <p>Controlar o caminho que o código segue durante a execução é chamado de <strong>controle de fluxo</strong>. Com ele, podemos fazer nossos programas tomarem decisões e executarem blocos de código repetidamente.</p>
 <section id="instrucoes-condicionais">
 <h2><strong>Instruções Condicionais</strong><a class="headerlink" href="#instrucoes-condicionais" title="Link to this heading">#</a></h2>
-<p>Uma condição é qualquer expressão que resulte em um valor booleano (<code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code>), em Python existem 3 tipos <strong>instruções condicionais</strong>, são elas: <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> e <code class="docutils literal notranslate"><span class="pre">else</span></code>. Juntas, elas permitem que seu programa execute diferentes blocos de código com base em se uma ou mais condições são <strong>verdadeiras</strong> (<code class="docutils literal notranslate"><span class="pre">True</span></code>) ou <strong>falsas</strong> (<code class="docutils literal notranslate"><span class="pre">False</span></code>). Os operadores de comparação e lógicos que aprendemos serão cruciais aqui!</p>
+<p>Uma condição é qualquer expressão que resulte em um valor booleano (<code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code>), em Python existem 3 tipos de <strong>instruções condicionais</strong>, são elas: <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> e <code class="docutils literal notranslate"><span class="pre">else</span></code>. Juntas, elas permitem que seu programa execute diferentes blocos de código com base em se uma ou mais condições são <strong>verdadeiras</strong> (<code class="docutils literal notranslate"><span class="pre">True</span></code>) ou <strong>falsas</strong> (<code class="docutils literal notranslate"><span class="pre">False</span></code>). Os operadores de comparação e lógicos que aprendemos serão cruciais aqui!</p>
 <blockquote>
-<div><p>⚠️ <strong>Atenção</strong>: Todas instruções condicionais seguem a regra de identação, ela diz que o bloco de código que será executado pelo condicional deve ter 4 espaços de distância da margem de onde se inicia a condicional, todos os trechos de códigos que farão parte do bloco de código deverão ter a mesma identação, caso contrário o código falha.</p>
+<div><p>⚠️ <strong>Atenção</strong>: Todas instruções condicionais seguem a regra de indentação, ela diz que o bloco de código que será executado pelo condicional deve ter 4 espaços de distância da margem de onde se inicia a condicional, todos os trechos de códigos que farão parte do bloco de código deverão ter a mesma indentação, caso contrário o código falha.</p>
 </div></blockquote>
 <section id="instrucao-if">
 <h3><strong>Instrução <code class="docutils literal notranslate"><span class="pre">if</span></code></strong><a class="headerlink" href="#instrucao-if" title="Link to this heading">#</a></h3>
@@ -485,7 +485,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">condicao</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="k">if</span> <span class="n">condicao</span><span class="p">:</span>
     <span class="c1"># Bloco de código a ser executado se a condição for True (verdadeira)</span>
-    <span class="c1"># Atenção à identação (geralmente 4 espaços)</span>
+    <span class="c1"># Atenção à indentação (geralmente 4 espaços)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Condição verdadeira&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bloco de código finalizado&quot;</span><span class="p">)</span>
 </pre></div>
@@ -527,7 +527,7 @@ Bloco de código finalizado
 </section>
 <section id="instrucao-elif-else-if">
 <h3><strong>Instrução <code class="docutils literal notranslate"><span class="pre">elif</span></code> (Else if)</strong><a class="headerlink" href="#instrucao-elif-else-if" title="Link to this heading">#</a></h3>
-<p>Permite verificar múltiplas <strong>condições</strong> em sequência. se uma condição <code class="docutils literal notranslate"><span class="pre">if</span></code> ou <code class="docutils literal notranslate"><span class="pre">elif</span></code> anterior for verdadeira, seu <strong>bloco de código</strong> é imediatamente executado e as <code class="docutils literal notranslate"><span class="pre">elif</span></code> e <code class="docutils literal notranslate"><span class="pre">else</span></code> subsequentes não são testadas nem executadas.</p>
+<p>Permite verificar múltiplas <strong>condições</strong> em sequência. Se uma condição <code class="docutils literal notranslate"><span class="pre">if</span></code> ou <code class="docutils literal notranslate"><span class="pre">elif</span></code> anterior for verdadeira, seu <strong>bloco de código</strong> é imediatamente executado e os blocos <code class="docutils literal notranslate"><span class="pre">elif</span></code> e <code class="docutils literal notranslate"><span class="pre">else</span></code> subsequentes não são testadas nem executadas.</p>
 <p>Sintaxe:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -612,7 +612,7 @@ Bloco de código finalizado
 </section>
 <section id="lacos-de-repeticao-loops">
 <h2><strong>Laços de Repetição (Loops)</strong><a class="headerlink" href="#lacos-de-repeticao-loops" title="Link to this heading">#</a></h2>
-<p><strong>Laços de repetição</strong> são usados para executar um bloco de código várias desde que algumas condições sejam cumpridas, podendo até mesmo gerar loops. Existem dois laços de repetição, os laços <code class="docutils literal notranslate"><span class="pre">while</span></code> e <code class="docutils literal notranslate"><span class="pre">for</span></code>, veremos mais sobre eles a seguir.</p>
+<p><strong>Laços de repetição</strong> são usados para executar um bloco de código várias vezes desde que algumas condições sejam cumpridas, podendo até mesmo gerar loops. Existem dois laços de repetição, os laços <code class="docutils literal notranslate"><span class="pre">while</span></code> e <code class="docutils literal notranslate"><span class="pre">for</span></code>, veremos mais sobre eles a seguir.</p>
 <section id="laco-while">
 <h3><strong>Laço <code class="docutils literal notranslate"><span class="pre">While</span></code></strong><a class="headerlink" href="#laco-while" title="Link to this heading">#</a></h3>
 <p>Ele repete um bloco de código <strong>enquanto</strong> (<code class="docutils literal notranslate"><span class="pre">while</span></code>) uma condição específica for verdadeira.</p>
@@ -628,7 +628,7 @@ Bloco de código finalizado
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;loop&quot;</span><span class="p">)</span>
 
     <span class="c1"># É crucial que algo dentro do loop possa eventualmente</span>
-    <span class="c1"># tornar a condição False, para evitar um loop infinitoa!</span>
+    <span class="c1"># tornar a condição False, para evitar um loop infinito!</span>
     <span class="n">condicao</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
@@ -696,7 +696,7 @@ Fogo!
 </div>
 </div>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">variavel_item</span></code>: É uma váriavel que, a cada iteração, recebe o valor do item atual da sequência, normalmente usamos letras para referencia-los, com a letra <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variavel_item</span></code>: É uma variável que, a cada iteração, recebe o valor do item atual da sequência, normalmente usamos letras para referenciá-los, com a letra <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iteravel</span></code>: A sequência ou objeto sobre o qual se está iterando.</p></li>
 </ul>
 <p>Ao contrário do <code class="docutils literal notranslate"><span class="pre">while</span></code>, laços <code class="docutils literal notranslate"><span class="pre">for</span></code> não precisam que você sinalize dentro do código quando parar, na declaração do laço você especifica até onde ele deve ir.</p>
@@ -776,7 +776,7 @@ N
 </section>
 <section id="controle-de-lacos-break-continue-pass">
 <h2><strong>Controle de Laços (<code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code>, <code class="docutils literal notranslate"><span class="pre">pass</span></code>)</strong><a class="headerlink" href="#controle-de-lacos-break-continue-pass" title="Link to this heading">#</a></h2>
-<p>Resumidamente, permitem alterar o fluxo normal dentro de um loop. Você irá entender melhor quando vê os próximos exemplos:</p>
+<p>Resumidamente, permitem alterar o fluxo normal dentro de um loop. Você irá entender melhor quando vir os próximos exemplos:</p>
 </section>
 <section id="quebra-break">
 <h2><strong>Quebra (<code class="docutils literal notranslate"><span class="pre">break</span></code>)</strong><a class="headerlink" href="#quebra-break" title="Link to this heading">#</a></h2>
@@ -869,7 +869,7 @@ N
 </div>
 <p>O código acima garante que, ainda que eu não esteja certo a respeito do laço <code class="docutils literal notranslate"><span class="pre">for</span></code>, ela possa existir e ser usada no resto do meu código, sem apresentar erros.</p>
 <blockquote>
-<div><p>🔵 <strong>Observação</strong>: passa pode ser usado em qualquer estrutura que execute um bloco de código, seja ela <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code> ou <code class="docutils literal notranslate"><span class="pre">class</span></code> (ainda veremos)</p>
+<div><p>🔵 <strong>Observação</strong>: pass pode ser usado em qualquer estrutura que execute um bloco de código, seja ela <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code> ou <code class="docutils literal notranslate"><span class="pre">class</span></code> (ainda veremos)</p>
 </div></blockquote>
 </section>
 </section>

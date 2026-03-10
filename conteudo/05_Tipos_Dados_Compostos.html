@@ -488,7 +488,7 @@ document.write(`
 <p>Os principais tipos sequenciais são:</p>
 <section id="listas-list">
 <h3><strong>Listas (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</strong><a class="headerlink" href="#listas-list" title="Link to this heading">#</a></h3>
-<p>É uma coleção <strong>ordenada</strong> e <strong>mutável</strong> de itens, podendo conter itens de diferentes tipos (heterogênea). Elas suportam operações como adição, remorção e modificação de itens.</p>
+<p>É uma coleção <strong>ordenada</strong> e <strong>mutável</strong> de itens, podendo conter itens de diferentes tipos (heterogênea). Elas suportam operações como adição, remoção e modificação de itens.</p>
 <p>São frequentemente usadas para armazenar coleções de itens que podem precisar ser <strong>alterados</strong> (adicionados, removidos, modificados), sendo muito versátil.</p>
 <p>Para criar uma lista é bem simples, basta usar colchetes <code class="docutils literal notranslate"><span class="pre">[]</span></code> e separar os itens por vígulas (<code class="docutils literal notranslate"><span class="pre">,</span></code>).</p>
 <div class="cell docutils container">
@@ -502,8 +502,8 @@ document.write(`
 </div>
 </div>
 <blockquote>
-<div><p>🔴 <strong>Importante</strong>: Os indices de uma lista começam a partir do número <code class="docutils literal notranslate"><span class="pre">0</span></code> e assim segue a sequência dos itens.</p>
-<p>Por exemplo: [1, 2, 3, 4] seus indices são 1 (indice 0), 2 (indice 1), 3 (indice 2) e 4 (indice 3)</p>
+<div><p>🔴 <strong>Importante</strong>: Os índices de uma lista começam a partir do número <code class="docutils literal notranslate"><span class="pre">0</span></code> e assim segue a sequência dos itens.</p>
+<p>Por exemplo: [1, 2, 3, 4] seus índices são 1 (indice 0), 2 (indice 1), 3 (indice 2) e 4 (indice 3)</p>
 </div></blockquote>
 <p>Operações comuns:</p>
 <ul class="simple">
@@ -713,14 +713,14 @@ document.write(`
 <section id="conjunto-set">
 <h3><strong>conjunto (<code class="docutils literal notranslate"><span class="pre">set()</span></code>)</strong><a class="headerlink" href="#conjunto-set" title="Link to this heading">#</a></h3>
 <p>É uma coleção <strong>não ordenada</strong> e <strong>mútavel</strong> de itens <strong>únicos</strong> (sem duplicatas).</p>
-<p>São usadas para testar se um item pertence a uma coleção, remover duplicatas de uma lista, realizar operações matemáticas de conjutos (união, interserção, diferença)</p>
-<p>Sua criação é feita com o uso de chaves <code class="docutils literal notranslate"><span class="pre">{}</span></code> com itens separados por vírgulas, ou a função <code class="docutils literal notranslate"><span class="pre">set()</span></code>, pois <code class="docutils literal notranslate"><span class="pre">{}</span></code> cria um dicionário vázio.</p>
+<p>São usadas para testar se um item pertence a uma coleção, remover duplicatas de uma lista, realizar operações matemáticas de conjuntos (união, interseção, diferença)</p>
+<p>Sua criação é feita com o uso de chaves <code class="docutils literal notranslate"><span class="pre">{}</span></code> com itens separados por vírgulas, ou a função <code class="docutils literal notranslate"><span class="pre">set()</span></code>, pois <code class="docutils literal notranslate"><span class="pre">{}</span></code> cria um dicionário vazio.</p>
 <p>Exemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeros_unicos</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}</span> <span class="c1"># armazena os números ignorando duplicatas</span>
 <span class="n">letras</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;abacadabra&quot;</span><span class="p">)</span> <span class="c1"># armazena as letras separadamente e sem duplicatas</span>
-<span class="n">conjunto_vazio</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span> <span class="c1"># conjunto vázio</span>
+<span class="n">conjunto_vazio</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span> <span class="c1"># conjunto vazio</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">numeros_unicos</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">letras</span><span class="p">)</span>
@@ -730,14 +730,14 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4, 5}
-{&#39;r&#39;, &#39;b&#39;, &#39;d&#39;, &#39;c&#39;, &#39;a&#39;}
+{&#39;c&#39;, &#39;a&#39;, &#39;b&#39;, &#39;d&#39;, &#39;r&#39;}
 set()
 </pre></div>
 </div>
 </div>
 </div>
 <blockquote>
-<div><p>🔵 <strong>Observação</strong>: Conjuntos não suportam indexação e nem fatiamento, seus valores são acessados</p>
+<div><p>🔵 <strong>Observação</strong>: Conjuntos não suportam indexação e nem fatiamento devido à sua natureza não ordenada. Seus valores só podem ser acessados através de <code class="docutils literal notranslate"><span class="pre">loops</span></code> ou do operador <code class="docutils literal notranslate"><span class="pre">in</span></code> (veremos logo mais).</p>
 </div></blockquote>
 </section>
 <section id="conjunto-congelado-frozenset">
@@ -783,12 +783,12 @@ frozenset({1, 2, 3, 4})
 <tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">in</span></code></p></td>
 <td class="text-center"><p>Está contido</p></td>
 <td class="text-center"><p>5 in [1, 2, 3, 4 , 5]</p></td>
-<td class="text-center"><p>Retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se o valor usado como parâmentro for encontrado na sequência indicada</p></td>
+<td class="text-center"><p>Retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se o valor usado como parâmetro for encontrado na sequência indicada</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code></p></td>
 <td class="text-center"><p>Não está contido</p></td>
 <td class="text-center"><p>6 not in [1, 2, 3, 4 , 5]</p></td>
-<td class="text-center"><p>Retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se o valor usado como parâmentro não for encontrado na sequência indicada</p></td>
+<td class="text-center"><p>Retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se o valor usado como parâmetro não for encontrado na sequência indicada</p></td>
 </tr>
 </tbody>
 </table>
@@ -848,7 +848,7 @@ True
 <p>São usados para verificar se duas variáveis se referem ao <strong>mesmo objeto na memória</strong>. Para entendermos esse operador, primeiro precisamos entender o que é um <strong>objeto na memória</strong>.</p>
 <section id="objetos-na-memoria">
 <h4><strong>Objetos na memória</strong><a class="headerlink" href="#objetos-na-memoria" title="Link to this heading">#</a></h4>
-<p>É um pouco estranho de entender no ínicio, mas o exemplo a seguir vai deixar mais fácil a compreensão.</p>
+<p>É um pouco estranho de entender no início, mas o exemplo a seguir vai deixar mais fácil a compreensão.</p>
 <p>Exemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -867,8 +867,8 @@ True
 </div>
 </div>
 <p>Veja que todas as variáveis possuem o mesmo valor (<code class="docutils literal notranslate"><span class="pre">10000</span></code>), mas isso <strong>não significa que todas referenciam o mesmo objeto na memória</strong>.</p>
-<p>Aconte que quando criamos uma variável, ele reserva um espaço na memória que guarda o valor que lhe foi atribuido e a variável em si é apenas como uma referência (<code class="docutils literal notranslate"><span class="pre">ponteiro</span></code>) para o valor salvo na memória, sem conter os valores diretamente.</p>
-<p>Então por mais que todas as variáveis possuam o mesmo valor (<code class="docutils literal notranslate"><span class="pre">10000</span></code>), o endereço onde esse valor está salvo é diferente para todas elas. Usaremos a função <code class="docutils literal notranslate"><span class="pre">id()</span></code> para vereficar se os <strong>IDs</strong> das variáveis são iguais:</p>
+<p>Acontece que quando criamos uma variável, ele reserva um espaço na memória que guarda o valor que lhe foi atribuído e a variável em si é apenas como uma referência (<code class="docutils literal notranslate"><span class="pre">ponteiro</span></code>) para o valor salvo na memória, sem conter os valores diretamente.</p>
+<p>Então por mais que todas as variáveis possuam o mesmo valor (<code class="docutils literal notranslate"><span class="pre">10000</span></code>), o endereço onde esse valor está salvo é diferente para todas elas. Usaremos a função <code class="docutils literal notranslate"><span class="pre">id()</span></code> para verificar se os <strong>IDs</strong> das variáveis são iguais:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="c1"># Exibe o endereço de memória da variável</span>
@@ -879,16 +879,16 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140100771499536
-140100771499536
-140100771499568
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140497314287728
+140497314287728
+140497314286448
 </pre></div>
 </div>
 </div>
 </div>
 <p>Veja que por mais que as variáveis possuam o mesmo valor, alguns <strong>IDs</strong> (endereço na memória) são diferentes, indicando que <strong>seus ponteiros referenciam objetos diferentes na memória</strong>.</p>
-<p>Repare que a variável <code class="docutils literal notranslate"><span class="pre">c</span></code> <strong>possuí o mesmo endereço</strong> que <code class="docutils literal notranslate"><span class="pre">a</span></code>, isso acontece por que a variável <code class="docutils literal notranslate"><span class="pre">a</span></code> é atribuida à variável <code class="docutils literal notranslate"><span class="pre">c</span></code> no trecho <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">a</span></code>. Isso faz o ponteiro de <code class="docutils literal notranslate"><span class="pre">c</span></code> apontar pro mesmo endereço que o ponteiro de <code class="docutils literal notranslate"><span class="pre">a</span></code> aponta na memória.</p>
-<p>Em resumo, <strong>objetos na memória são os endereços lógicos onde ficam salvos os valores que atribuimos às variáveis</strong>.</p>
+<p>Repare que a variável <code class="docutils literal notranslate"><span class="pre">c</span></code> <strong>possui o mesmo endereço</strong> que <code class="docutils literal notranslate"><span class="pre">a</span></code>, isso acontece por que a variável <code class="docutils literal notranslate"><span class="pre">a</span></code> é atribuída à variável <code class="docutils literal notranslate"><span class="pre">c</span></code> no trecho <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">a</span></code>. Isso faz o ponteiro de <code class="docutils literal notranslate"><span class="pre">c</span></code> apontar pro mesmo endereço que o ponteiro de <code class="docutils literal notranslate"><span class="pre">a</span></code> aponta na memória.</p>
+<p>Em resumo, <strong>objetos na memória são os endereços lógicos onde ficam salvos os valores que atribuímos às variáveis</strong>.</p>
 </section>
 <section id="voltando-aos-operadores">
 <h4><strong>Voltando aos operadores</strong><a class="headerlink" href="#voltando-aos-operadores" title="Link to this heading">#</a></h4>
@@ -905,12 +905,12 @@ True
 <tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">is</span></code></p></td>
 <td class="text-center"><p>É o mesmo objeto</p></td>
 <td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">y</span></code></p></td>
-<td class="text-center"><p>Retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> apotam para o mesmo objeto na memória</p></td>
+<td class="text-center"><p>Retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> apontam para o mesmo objeto na memória</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code></p></td>
 <td class="text-center"><p>Não é o mesmo objeto</p></td>
 <td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">y</span></code></p></td>
-<td class="text-center"><p>Retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> não apotam para o mesmo objeto na memória</p></td>
+<td class="text-center"><p>Retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> não apontam para o mesmo objeto na memória</p></td>
 </tr>
 </tbody>
 </table>
